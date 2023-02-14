@@ -18,7 +18,7 @@ function init() {
         var mapElement = document.getElementById('map');
         var map = new google.maps.Map(mapElement, mapOptions);
 
-        var addresses = ['Kilimani'];
+        var addresses = ['Kenya'];
 
         for (var x = 0; x < addresses.length; x++) {
             $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
