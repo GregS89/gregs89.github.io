@@ -178,7 +178,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -191,7 +191,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover_2 {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -693,9 +693,9 @@ figure {
 }
 
 #fh5co-portfolio-list {
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
