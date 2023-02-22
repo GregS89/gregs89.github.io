@@ -1,12 +1,18 @@
 var google;
 
 // Load the Google Maps API asynchronously
-function loadScript() {
+function loadScript(url, callback) {
   var script = document.createElement("script");
+  if (callback) script.onload = callback;
   script.type = "text/javascript";
-  script.src =
-    "https://maps.googleapis.com/maps/api/js?key=AIzaSyDSyH0GsYKD2yiHmQiyplsIgFKx_apdllU&callback=init";
+  script.src = url;
   document.body.appendChild(script);
+}
+
+function loadMapsAPI() {
+  loadScript(
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyDSyH0GsYKD2yiHmQiyplsIgFKx_apdllU&callback=mapsApiReady"
+  );
 }
 
 function init() {
@@ -102,8 +108,7 @@ function init() {
   for (var x = 0; x < addresses.length; x++) {
     $.getJSON(
       "http://maps.googleapis.com/maps/api/geocode/json?address=" +
-        addresses[x] +
-        "&sensor=false",
+        addresses[x],
       null,
       function (data) {
         var p = data.results[0].geometry.location;
@@ -117,4 +122,8 @@ function init() {
     );
   }
 }
-google.maps.event.addDomListener(window, "load", init);
+function mapsApiReady() {
+  loadScript(init);
+}
+window.onload = loadMapsAPI;
+//google.maps.event.addEventListener(window, "load", init);
