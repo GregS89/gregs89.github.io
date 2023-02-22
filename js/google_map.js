@@ -84,7 +84,7 @@ function initMap() {
   // Create the Google Map using the element and options defined above
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  const addresses = ["Kilimani"];
+  const addresses = ["Nairobi"];
 
   for (let x = 0; x < addresses.length; x++) {
     $.getJSON(
@@ -107,7 +107,7 @@ function initMap() {
 // Load the Google Maps API
 function loadMapsAPI() {
   loadScript(
-    "https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyDSyH0GsYKD2yiHmQiyplsIgFKx_apdllU&callback=initMap"
   );
 }
 
