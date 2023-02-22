@@ -88,7 +88,7 @@ function initMap() {
 
   for (let x = 0; x < addresses.length; x++) {
     $.getJSON(
-      "http://maps.googleapis.com/maps/api/geocode/json?address=" +
+      "https://maps.googleapis.com/maps/api/geocode/json?address=" +
         addresses[x],
       null,
       function (data) {
