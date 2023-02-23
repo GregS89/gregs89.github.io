@@ -84,7 +84,7 @@ function initMap() {
   // Create the Google Map using the element and options defined above
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-  const addresses = ["Nairobi"];
+  const addresses = ["Kilimani"];
 
   for (let x = 0; x < addresses.length; x++) {
     $.getJSON(
