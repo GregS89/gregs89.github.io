@@ -16,13 +16,12 @@
     new WOW().init();
 
 
-    // Fixed Navbar
-    $('.fixed-top').css('top', $('.top-bar').height());
+    // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop()) {
-            $('.fixed-top').addClass('bg-dark').css('top', 0);
+        if ($(this).scrollTop() > 300) {
+            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
         } else {
-            $('.fixed-top').removeClass('bg-dark').css('top', $('.top-bar').height());
+            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
     
@@ -41,21 +40,6 @@
     });
 
 
-    // Header carousel
-    $(".header-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1500,
-        loop: true,
-        nav: true,
-        dots: false,
-        items: 1,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ]
-    });
-
-
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
         delay: 10,
@@ -63,30 +47,36 @@
     });
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: false,
-        smartSpeed: 1000,
-        margin: 25,
+    // Date and time picker
+    $('.date').datetimepicker({
+        format: 'L'
+    });
+    $('.time').datetimepicker({
+        format: 'LT'
+    });
+
+
+    // Header carousel
+    $(".header-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
         loop: true,
-        center: true,
-        dots: false,
-        nav: true,
-        navText : [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
+        nav: false,
+        dots: true,
+        items: 1,
+        dotsData: true,
+    });
+
+
+    // Testimonials carousel
+    $('.testimonial-carousel').owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        loop: true,
+        nav: false,
+        dots: true,
+        items: 1,
+        dotsData: true,
     });
 
     
