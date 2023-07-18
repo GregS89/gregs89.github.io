@@ -245,6 +245,8 @@
                 <a href="https://htmlcodex.com/contact-form">Download Now</a>.
               </p>
               <form>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
                 <div class="row g-3">
                   <div class="col-md-6">
                     <div class="form-floating">
@@ -296,6 +298,22 @@
                     </button>
                   </div>
                 </div>
+                <script>
+                  $(document).ready(function () {
+                    $("#contactForm").submit(function (e) {
+                      e.preventDefault();
+                      var formData = $(this).serialize();
+                      $.ajax({
+                        type: "POST",
+                        url: "submit_form.php",
+                        data: formData,
+                        success: function (response) {
+                          $("#formResponse").html(response);
+                        },
+                      });
+                    });
+                  });
+                </script>
               </form>
             </div>
           </div>
