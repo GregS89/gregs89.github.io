@@ -185,130 +185,191 @@
     <!-- Page Header End -->
 
     <!-- Appointment Start -->
-    <div class="container-xxl py-5">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <h4 class="section-title">Appointment</h4>
-            <h1 class="display-5 mb-4">
-              Make An Appointment To Start Your Dream Project
-            </h1>
-            <p class="mb-4">
-              Embark on your architectural journey. Secure a consultation to
-              transform your vision into reality. Let's shape your dreams into
-              captivating spaces that stand the test of time. Schedule your
-              appointment today.
-            </p>
-            <div class="row g-4">
-              <div class="col-12">
-                <div class="d-flex">
-                  <div
-                    class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
-                    style="width: 65px; height: 65px"
-                  >
-                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
-                  </div>
-                  <div class="ms-4">
-                    <p class="mb-2">Call Us Now</p>
-                    <h3 class="mb-0">+254 711 274 749</h3>
+    <form action="appointment.php" method="POST">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+              <h4 class="section-title">Appointment</h4>
+              <h1 class="display-5 mb-4">
+                Book a Consultation with Our Compliance Experts
+              </h1>
+              <p class="mb-4">
+                Let us help you navigate the complex world of construction
+                permits and approvals. Schedule a one-on-one consultation with
+                our team to discuss your project requirements, timelines, and
+                the necessary compliance steps. Whether you're a property owner,
+                developer, or contractor, our experts are ready to guide you
+                through a smooth, efficient approval process. Book now and take
+                the first step toward building with confidence.
+              </p>
+              <div class="row g-4">
+                <div class="col-12">
+                  <div class="d-flex">
+                    <div
+                      class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
+                      style="width: 65px; height: 65px"
+                    >
+                      <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                    </div>
+                    <div class="ms-4">
+                      <p class="mb-2">Call Us Now</p>
+                      <h3 class="mb-0">+254 719 222 226</h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-12">
-                <div class="d-flex">
-                  <div
-                    class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
-                    style="width: 65px; height: 65px"
-                  >
-                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
-                  </div>
-                  <div class="ms-4">
-                    <p class="mb-2">Mail Us Now</p>
-                    <h3 class="mb-0">equiries@builcompliance360.com</h3>
+                <div class="col-12">
+                  <div class="d-flex">
+                    <div
+                      class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
+                      style="width: 65px; height: 65px"
+                    >
+                      <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                    </div>
+                    <div class="ms-4">
+                      <p class="mb-2">Mail Us Now</p>
+                      <h3 class="mb-0">enquiries@buildcompliance360.com</h3>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="row g-3">
-              <div class="col-12 col-sm-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  style="height: 55px"
-                />
-              </div>
-              <div class="col-12 col-sm-6">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  style="height: 55px"
-                />
-              </div>
-              <div class="col-12 col-sm-6">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Mobile"
-                  style="height: 55px"
-                />
-              </div>
-              <div class="col-12 col-sm-6">
-                <select class="form-select" style="height: 55px">
-                  <option selected>Choose Service</option>
-                  <option value="1">Architect</option>
-                  <option value="2">3D Animations</option>
-                  <option value="3">House Planning</option>
-                  <option value="4">Interior Design</option>
-                  <option value="5">House Planning</option>
-                  <option value="6">Project Management</option>
-                  <option value="7">Graphic Designs</option>
-                </select>
-              </div>
-              <div class="col-12 col-sm-6">
-                <div class="date" id="date" data-target-input="nearest">
+
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="row g-3">
+                <div class="col-12 col-sm-6">
+                  <label for="name" class="form-label">Your Name</label>
                   <input
                     type="text"
-                    class="form-control datetimepicker-input"
-                    placeholder="Choose Date"
-                    data-target="#date"
-                    data-toggle="datetimepicker"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder=""
+                    required
+                    aria-required="true"
                     style="height: 55px"
                   />
                 </div>
-              </div>
-              <div class="col-12 col-sm-6">
-                <div class="time" id="time" data-target-input="nearest">
+                <div class="col-12 col-sm-6">
+                  <label for="email" class="form-label">Your Email</label>
                   <input
-                    type="text"
-                    class="form-control datetimepicker-input"
-                    placeholder="Choose Date"
-                    data-target="#time"
-                    data-toggle="datetimepicker"
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder=""
+                    required
+                    aria-required="true"
                     style="height: 55px"
                   />
                 </div>
-              </div>
-              <div class="col-12">
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary w-100 py-3" type="submit">
-                  Book Appointment
-                </button>
+                <div class="col-12 col-sm-6">
+                  <label for="mobile" class="form-label">Your Mobile</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="mobile"
+                    name="mobile"
+                    placeholder=""
+                    required
+                    aria-required="true"
+                    style="height: 55px"
+                  />
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="service" class="form-label">Select Service</label>
+                  <select
+                    class="form-select"
+                    id="service"
+                    name="service"
+                    required
+                    aria-required="true"
+                    style="height: 55px"
+                  >
+                    <option value="">Choose a service</option>
+                    <option value="title_deed">Title Deed Transfers</option>
+                    <option value="change_of_user">
+                      Change of User Applications
+                    </option>
+                    <option value="architectural_plans">
+                      Architectural Plans
+                    </option>
+                    <option value="architectural_approvals">
+                      Architectural County Approvals
+                    </option>
+                    <option value="nema">NEMA Licenses</option>
+                    <option value="nca">NCA Licenses</option>
+                    <option value="structural_designs">
+                      Structural Designs
+                    </option>
+                    <option value="structural_approvals">
+                      Structural County Approvals
+                    </option>
+                    <option value="land_survey">Land Survey Services</option>
+                    <option value="other">Other Services</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="date" class="form-label">Preferred Date</label>
+                  <div class="date" id="date" data-target-input="nearest">
+                    <input
+                      type="text"
+                      class="form-control datetimepicker-input"
+                      id="appointment_date"
+                      name="appointment_date"
+                      placeholder="Choose Date"
+                      required
+                      aria-required="true"
+                      data-target="#date"
+                      data-toggle="datetimepicker"
+                      style="height: 55px"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="time" class="form-label">Preferred Time</label>
+                  <div class="time" id="time" data-target-input="nearest">
+                    <input
+                      type="text"
+                      class="form-control datetimepicker-input"
+                      id="appointment_time"
+                      name="appointment_time"
+                      placeholder="Choose Time"
+                      required
+                      aria-required="true"
+                      data-target="#time"
+                      data-toggle="datetimepicker"
+                      style="height: 55px"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="Please provide any additional details about your project"
+                    required
+                    aria-required="true"
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button
+                    class="btn btn-primary w-100 py-3"
+                    type="submit"
+                    aria-label="Book Appointment"
+                  >
+                    Book Appointment
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </form>
     <!-- Appointment End -->
 
     <!-- Footer Start -->

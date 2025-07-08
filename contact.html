@@ -243,7 +243,7 @@
               Feel free to contact us for any inquiries or questions you may
               <a href="">Call Now</a>.
             </p>
-            <form>
+            <form action="contact-submit.php" method="POST">
               <div class="row g-3">
                 <div class="col-md-6">
                   <div class="form-floating">
@@ -251,7 +251,9 @@
                       type="text"
                       class="form-control"
                       id="name"
+                      name="name"
                       placeholder="Your Name"
+                      required
                     />
                     <label for="name">Your Name</label>
                   </div>
@@ -262,7 +264,9 @@
                       type="email"
                       class="form-control"
                       id="email"
+                      name="email"
                       placeholder="Your Email"
+                      required
                     />
                     <label for="email">Your Email</label>
                   </div>
@@ -273,7 +277,9 @@
                       type="text"
                       class="form-control"
                       id="subject"
+                      name="subject"
                       placeholder="Subject"
+                      required
                     />
                     <label for="subject">Subject</label>
                   </div>
@@ -284,7 +290,9 @@
                       class="form-control"
                       placeholder="Leave a message here"
                       id="message"
+                      name="message"
                       style="height: 100px"
+                      required
                     ></textarea>
                     <label for="message">Message</label>
                   </div>
@@ -364,8 +372,8 @@
             <a class="btn btn-link" href="">Permint Aqcuisition</a>
             <a class="btn btn-link" href="">Regulatory Compliance</a>
             <a class="btn btn-link" href="">Consultation Services</a>
-            <a class="btn btn-link" href="">Design Services</a>
-            <a class="btn btn-link" href="">Project Management</a>
+            <!-- <a class="btn btn-link" href="">Design Services</a>
+            <a class="btn btn-link" href="">Project Management</a> -->
             <a class="btn btn-link" href="">Land Survey Services</a>
           </div>
           <div class="col-lg-3 col-md-6">
